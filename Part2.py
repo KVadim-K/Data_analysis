@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('World-happiness-report-2024.csv')
+# df = pd.read_csv('World-happiness-report-2024.csv')
+
 # print(df.head())  # Вывод первых 5 строк
 # print(df.tail())  # Вывод последних 5 строк
 # print(df.info())  # Информация о датафрейме
@@ -13,4 +14,13 @@ df = pd.read_csv('World-happiness-report-2024.csv')
 # print(df[['Country name', 'Regional indicator']])# выводить конкретную информацию, например, сведения из опр. столбцов
 # print(df.loc[56])  # всю информацию, которая есть в строке 56 по всем колонкам.
 # print(df.loc[56, 'Healthy life expectancy'])  # В результате мы получаем только один показатель по конкретной строке
-print(df[df['Healthy life expectancy'] > 0.7])
+# print(df[df['Healthy life expectancy'] > 0.7])  # В этой строке мы указали, что из датафрейма необходимо извлечь
+# # информацию из конкретного столбца, которая при этом подчиняется конкретному условию.
+
+df = pd.read_csv('hh.csv')
+df['Test'] = [new for new in range(29)]  # Добавление нового столбца в датафрейм
+print(df)
+df.drop('Test', axis=1, inplace=True)  # Удаление столбца
+print(df)
+df.drop(28, axis=0, inplace=True)
+print(df)
