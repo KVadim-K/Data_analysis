@@ -11,7 +11,7 @@
 # # 6. Вычислите стандартное отклонение
 
 import pandas as pd
-import matplotlib.pyplot as plt
+import matpl.pyplot as plt
 
 data = {
     'Ученики' : ['Синицына', 'Чернов', 'Сидорчук', 'Ефимова', 'Кузнецов', 'Иванов', 'Петров', 'Смирнов', 'Козлов',
