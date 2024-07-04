@@ -8,17 +8,12 @@ import csv
 import matplotlib.pyplot as plt
 
 driver = webdriver.Chrome()  # Используем Google Chrome
-
 url = 'https://www.divan.ru/rostov-na-donu/category/rasprodazha-divanov'  # URL страницы
-
 driver.get(url)  # Открытие страницы
-
 time.sleep(5)  # Ждем некоторое время, чтобы страница полностью загрузилась
 
 # Парсинг цен
-# prices = driver.find_elements(By.XPATH, "//span[@data-mark='MainPrice']/span")
 prices = driver.find_elements(By.XPATH, "//span[@data-testid='price']")
-
 
 # Открытие CSV файла для записи
 with open('pricesDivan.csv', mode='w', newline='', encoding='utf-8') as file:
